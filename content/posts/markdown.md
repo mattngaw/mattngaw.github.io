@@ -1,9 +1,6 @@
 +++
 title = "Markdown Test"
 date = "2022-01-01"
-[taxonomies]
-year=["2022"]
-category=["pumpingiron"]
 +++
 
 ## Code Block
@@ -16,9 +13,9 @@ fn main() {
 
 ## Quote
 
-> Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-
-- Albert Einstein
+> Gabagoo
+> 
+> -- <cite>Evan Ravioli</cite>
 
 ## Code tags
 

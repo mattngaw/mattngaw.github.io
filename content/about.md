@@ -16,7 +16,7 @@ engineering at Carnegie Mellon University.
 I care about computer systems, the hardware-software interface,
 [Rust](https://www.rust-lang.org/), and fighting climate change.
 
-
+Outside of work, I'm an avid chess fan, gym bro, and tracklete.
 
 <br/>
 
