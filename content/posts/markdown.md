@@ -1,6 +1,9 @@
 +++
 title = "Markdown Test"
 date = "2022-01-01"
+[taxonomies]
+year=["2022"]
+category=["pumpingiron"]
 +++
 
 ## Code Block
