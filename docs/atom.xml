@@ -4,27 +4,51 @@
 	<link href="https://mattngaw.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://mattngaw.com"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-01-01T00:00:00+00:00</updated>
+	<updated>2022-07-29T00:00:00+00:00</updated>
 	<id>https://mattngaw.com/atom.xml</id>
 	<entry xml:lang="en">
-		<title>Markdown Test</title>
-		<published>2022-01-01T00:00:00+00:00</published>
-		<updated>2022-01-01T00:00:00+00:00</updated>
-		<link href="https://mattngaw.com/posts/markdown/" type="text/html"/>
-		<id>https://mattngaw.com/posts/markdown/</id>
-		<content type="html">&lt;h2 id=&quot;code-block&quot;&gt;Code Block&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#ff7733;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c2d94c;&quot;&gt;&amp;quot;Hello World&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bfbab0cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;quote&quot;&gt;Quote&lt;&#x2F;h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Gabagoo&lt;&#x2F;p&gt;
-&lt;p&gt;-- &lt;cite&gt;Evan Ravioli&lt;&#x2F;cite&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;h2 id=&quot;code-tags&quot;&gt;Code tags&lt;&#x2F;h2&gt;
-&lt;p&gt;Lorem ipsum &lt;code&gt;dolor&lt;&#x2F;code&gt; sit amet, &lt;code&gt;consectetur adipiscing&lt;&#x2F;code&gt; elit.
-&lt;code&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+		<title>Courses @ CMU</title>
+		<published>2022-07-28T00:00:00+00:00</published>
+		<updated>2022-07-29T00:00:00+00:00</updated>
+		<link href="https://mattngaw.com/courses/" type="text/html"/>
+		<id>https://mattngaw.com/courses/</id>
+		<content type="html">&lt;p&gt;&lt;del&gt;Hated&lt;&#x2F;del&gt;. Taken. &lt;em&gt;Liked&lt;&#x2F;em&gt;. &lt;em&gt;&lt;strong&gt;Loved&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;fall-2022-current&quot;&gt;Fall 2022 (Current)&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;18-344 Computer Systems and the Hardware-Software Interface&lt;&#x2F;li&gt;
+&lt;li&gt;18-290 Signals and Systems&lt;&#x2F;li&gt;
+&lt;li&gt;10-301 Introduction to Machine Learning&lt;&#x2F;li&gt;
+&lt;li&gt;76-270 Writing for the Professions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;spring-2022&quot;&gt;Spring 2022&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;18-240 Structure and Design of Digital Systems&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;15-150 Principles of Functional Programming&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;del&gt;36-226 Introduction to Statistical Inference&lt;&#x2F;del&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;15-281 Artificial Intelligence: Representation and Problem Solving&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;98-008 Shilling The Rust Programming Language&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;fall-2021&quot;&gt;Fall 2021&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;18-213 Introduction to Computer Systems&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;36-225 Introduction to Probability Theory&lt;&#x2F;li&gt;
+&lt;li&gt;21-241 Matrices and Linear Transformations&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;del&gt;73-102 Principles of Microeconomics&lt;&#x2F;del&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;spring-2021&quot;&gt;Spring 2021&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;15-122 Principles of Imperative Computation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;18-100 Introduction to Electrical and Computer Engineering&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;76-101 Interpretation and Argument&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;21-127 Concepts of Mathematics&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;fall-2020&quot;&gt;Fall 2020&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;21-259 Calculus in Three Dimensions&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;15-112 Fundamentals of Programming and Computer Science&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;24-101 Fundamentals of Mechanical Engineering&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;39-109 Grand Challenge Freshman Seminar: Climate Change&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 </feed>

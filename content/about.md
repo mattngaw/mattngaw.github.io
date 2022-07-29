@@ -20,6 +20,6 @@ Outside of work, I'm an avid chess fan, gym bro, and tracklete.
 
 <br/>
 
-[Email](mailto:mngaw@andrew.cmu.edu). [Github](https://github.com/mattngaw).
+[Email](mailto:me@mattngaw.com). [Github](https://github.com/mattngaw).
 [Twitter](https://twitter.com/mattngaw). [Discord](about "matto#3787").
 [Lichess](https://lichess.org/@/skylake02).

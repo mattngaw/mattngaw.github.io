@@ -22,14 +22,14 @@ external_links_target_blank = false
 [extra]
 # Put all your custom variables here
 menu = [
-    { name = "/posts", url = "/posts", weight = 1 },
+    { name = "/dialogue", url = "/dialogue", weight = 1 },
     { name = "/projects", url = "/projects", weight = 2 },
     { name = "/about", url = "/about", weight = 3 },
 ]
 
 socials = [
-    { name = "twitter", url = "https://twitter.com/not_matthias", icon = "twitter" },
-    { name = "github", url = "https://github.com/not-matthias/", icon = "github" },
+    { name = "twitter", url = "https://twitter.com/mattngaw", icon = "twitter" },
+    { name = "github", url = "https://github.com/mattngaw", icon = "github" },
 ]
 
 taxonomies = [
@@ -38,6 +38,8 @@ taxonomies = [
 ]
 
 theme = "auto"
+
+toc = true
 
 [slugify]
 paths = "on"
