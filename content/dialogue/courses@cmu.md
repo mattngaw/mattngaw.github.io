@@ -12,10 +12,13 @@ toc = false
 
 # Fall 2022 (Current)
 
+- (TA) 18-213 Introduction to Computer Systems
 - 18-344 Computer Systems and the Hardware-Software Interface
 - 18-290 Signals and Systems
 - 10-301 Introduction to Machine Learning
 - 76-270 Writing for the Professions
+- 98-043 StuCo: Chess Tactics and Strategy
+- 98-317 StuCo: Hype for Types
 
 # Spring 2022
 
@@ -23,7 +26,7 @@ toc = false
 - *15-150 Principles of Functional Programming*
 - ~~36-226 Introduction to Statistical Inference~~
 - 15-281 Artificial Intelligence: Representation and Problem Solving
-- *98-008 Shilling The Rust Programming Language*
+- *98-008 StuCo: Shilling The Rust Programming Language*
 
 # Fall 2021
 
