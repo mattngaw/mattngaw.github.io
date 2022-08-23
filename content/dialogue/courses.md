@@ -3,7 +3,9 @@ title = "Courses @ CMU"
 date = "2022-07-28"
 updated = "2022-07-29"
 path = "/courses" 
-
+[taxonomies]
+Series = []
+Year = []
 [extra]
 toc = false
 +++
@@ -28,21 +30,21 @@ toc = false
 - 15-281 Artificial Intelligence: Representation and Problem Solving
 - *98-008 StuCo: Shilling The Rust Programming Language*
 
-# Fall 2021
+# Fall 2021 (First Time @ Pittsburgh)
 
 - ***18-213 Introduction to Computer Systems***
 - 36-225 Introduction to Probability Theory
 - 21-241 Matrices and Linear Transformations
 - ~~73-102 Principles of Microeconomics~~
 
-# Spring 2021
+# Spring 2021 (Remote @ Home)
 
 - 15-122 Principles of Imperative Computation
 - *18-100 Introduction to Electrical and Computer Engineering*
 - *76-101 Interpretation and Argument*
 - 21-127 Concepts of Mathematics
 
-# Fall 2020
+# Fall 2020 (Remote @ Home)
 
 - 21-259 Calculus in Three Dimensions
 - *15-112 Fundamentals of Programming and Computer Science*

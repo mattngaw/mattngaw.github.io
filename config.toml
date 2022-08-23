@@ -9,13 +9,18 @@ output_dir = "docs"
 
 theme = "apollo"
 
+taxonomies = [
+    { name = "Year", feed = true },
+    { name = "Series", feed = true },
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
-highlight_theme = "ayu-dark"
+highlight_theme = "axar"
 
-render_emoji = false
+render_emoji = true
 
 external_links_target_blank = false
 
@@ -27,20 +32,7 @@ menu = [
     { name = "/about", url = "/about", weight = 3 },
 ]
 
-socials = [
-    { name = "twitter", url = "https://twitter.com/mattngaw", icon = "twitter" },
-    { name = "github", url = "https://github.com/mattngaw", icon = "github" },
-]
-
-taxonomies = [
-    { name = "tag", feed = true},
-    { name = "year", feed = true},
-]
-
 theme = "auto"
 
 toc = true
 
-[slugify]
-paths = "on"
-taxonomies = "on"

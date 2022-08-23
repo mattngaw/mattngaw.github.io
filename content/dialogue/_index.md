@@ -2,6 +2,6 @@
 path = "dialogue"
 title = "dialogue"
 template = "dialogue.html"
-transparent = true
-sort_by = "date"
+sort_by = "update_date"
+paginate_by = 5
 +++
