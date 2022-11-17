@@ -4,98 +4,8 @@
 	<link href="https://mattngaw.com/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://mattngaw.com"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-22T00:00:00+00:00</updated>
+	<updated>2022-07-29T00:00:00+00:00</updated>
 	<id>https://mattngaw.com/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Leetcode in Rust #000</title>
-		<published>2022-08-22T00:00:00+00:00</published>
-		<updated>2022-08-22T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://mattngaw.com/dialogue/leet000/" type="text/html"/>
-		<id>https://mattngaw.com/dialogue/leet000/</id>
-		<content type="html">&lt;h1 id=&quot;problem-217-contains-duplicate&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;contains-duplicate&#x2F;&quot;&gt;Problem 217. Contains Duplicate&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;h2 id=&quot;description&quot;&gt;Description&lt;&#x2F;h2&gt;
-&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;&#x2F;code&gt;, return &lt;code&gt;true&lt;&#x2F;code&gt; if any value appears at least twice in the array, and return &lt;code&gt;false&lt;&#x2F;code&gt; if every element is distinct.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#ffffff;&quot;&gt;&lt;code&gt;&lt;span&gt;Examples
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Input: nums = [1,2,3,1]
-&lt;&#x2F;span&gt;&lt;span&gt;Output: true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Input: nums = [1,2,3,4]
-&lt;&#x2F;span&gt;&lt;span&gt;Output: false
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Input: nums = [1,1,1,3,3,4,3,2,4,2]
-&lt;&#x2F;span&gt;&lt;span&gt;Output: true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Constraints:
-&lt;&#x2F;span&gt;&lt;span&gt;1 &amp;lt;= nums.length &amp;lt;= 105
-&lt;&#x2F;span&gt;&lt;span&gt;-109 &amp;lt;= nums[i] &amp;lt;= 109
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;Solution {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span&gt;contains_duplicate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;solving&quot;&gt;Solving&lt;&#x2F;h2&gt;
-&lt;p&gt;To see if an element appears twice in an array, we probably need to look at every element of the array at least once, meaning the minimum time complexity is probably &lt;code&gt;O(n)&lt;&#x2F;code&gt;.
-In plain English, I&#x27;d like to iterate over the elements while keeping track of what I&#x27;ve seen so far. If I come across a duplicate, I&#x27;d then immediately break and signal that I&#x27;d seen a duplicate.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;std::collections::HashSet;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;Solution {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span&gt;contains_duplicate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;HashSet::new();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; x &lt;&#x2F;span&gt;&lt;span&gt;in&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; nums {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;contains&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;x) { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;return true&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;; }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{ seen.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;insert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(x); }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;return false&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This is pretty much a literal, Rust translation of our English pseudocode. This solution makes use of Rust&#x27;s standard hash set for &lt;code&gt;O(1)&lt;&#x2F;code&gt; insertion and retrieval.&lt;&#x2F;p&gt;
-&lt;p&gt;However, a closer inspection of &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;collections&#x2F;struct.HashSet.html#method.insert&quot;&gt;&lt;code&gt;HashSet::insert&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; reveals that the method returns a &lt;code&gt;bool&lt;&#x2F;code&gt; of whether or not the element we wanted to insert was already in the set.
-Using this fact, we can skip using &lt;code&gt;HashSet::contains&lt;&#x2F;code&gt; altogether.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span&gt;contains_duplicate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;HashSet::new();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; x &lt;&#x2F;span&gt;&lt;span&gt;in&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; nums {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;seen.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;insert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(x) { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;return true&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;; }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;return false&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Computationally this is an improvement, since we&#x27;re saving ourselves from an extra method call.&lt;&#x2F;p&gt;
-&lt;p&gt;For a cleaner, more functional way of solving this, we can make use of &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;iter&#x2F;trait.Iterator.html#method.all&quot;&gt;&lt;code&gt;Iterator::all&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;,
-which checks if all of the iterator&#x27;s elements satisfy some predicate (i.e. that every number inserted hasn&#x27;t already been inserted before).&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span&gt;contains_duplicate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;HashSet::new();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(|&lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;| seen.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;insert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(x))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This solution is elegant and written idiomatically in Rust.&lt;&#x2F;p&gt;
-&lt;p&gt;An alternative to this solution would be to add all of the elements to a set and then check if the size of the set is less than the length of the array.
-Since dupliates aren&#x27;t added to sets, and difference in size lets us know that there are duplicates.
-For this we can use the &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;collections&#x2F;struct.HashSet.html#impl-FromIterator%3CT%3E&quot;&gt;&lt;code&gt;FromIterator&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; trait for hash sets.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#ffffff;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span&gt;contains_duplicate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#8aa6c1;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen: HashSet&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#80d500;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;HashSet::from_iter(nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;());
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;        nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;() &lt;&#x2F;span&gt;&lt;span&gt;!=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt; seen.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8aa6c1;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;    }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cccccc;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;...
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;While this solution &lt;em&gt;looks&lt;&#x2F;em&gt; just as clean as the previous one and may perform similarly in the worst case, the previous solution does better in the average case, where a duplicate may appear in the middle of an array. Adding all of the elements of an array to a set obviously touches every single element, but iterating while also adding elements to the set has the potential to break early.&lt;&#x2F;p&gt;
-</content>
-	</entry>
 	<entry xml:lang="en">
 		<title>Courses @ CMU</title>
 		<published>2022-07-28T00:00:00+00:00</published>
@@ -103,15 +13,23 @@ For this we can use the &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2
 		<link rel="alternate" href="https://mattngaw.com/courses/" type="text/html"/>
 		<id>https://mattngaw.com/courses/</id>
 		<content type="html">&lt;p&gt;&lt;del&gt;Hated&lt;&#x2F;del&gt;. Taken. &lt;em&gt;Liked&lt;&#x2F;em&gt;. &lt;em&gt;&lt;strong&gt;Loved&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;spring-2023-upcoming&quot;&gt;Spring 2023 (Upcoming)&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;(TA maybe?) 18-213 Introduction to Computer Systems&lt;&#x2F;li&gt;
+&lt;li&gt;18-447 Introduction to Computer Architecture&lt;&#x2F;li&gt;
+&lt;li&gt;18-349 Introduction to Embedded Systems&lt;&#x2F;li&gt;
+&lt;li&gt;79-204 American Environmental History&lt;&#x2F;li&gt;
+&lt;li&gt;79-211 Modern Southeast Asia: Colonialism, Capitalism, and Cultural Exchange&lt;&#x2F;li&gt;
+&lt;li&gt;Perhaps one more gen-ed...&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h1 id=&quot;fall-2022-current&quot;&gt;Fall 2022 (Current)&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;(TA) 18-213 Introduction to Computer Systems&lt;&#x2F;li&gt;
-&lt;li&gt;18-344 Computer Systems and the Hardware-Software Interface&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;18-344 Computer Systems and the Hardware-Software Interface&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;18-290 Signals and Systems&lt;&#x2F;li&gt;
-&lt;li&gt;10-301 Introduction to Machine Learning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;10-301 Introduction to Machine Learning&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;76-270 Writing for the Professions&lt;&#x2F;li&gt;
 &lt;li&gt;98-043 StuCo: Chess Tactics and Strategy&lt;&#x2F;li&gt;
-&lt;li&gt;98-317 StuCo: Hype for Types&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h1 id=&quot;spring-2022&quot;&gt;Spring 2022&lt;&#x2F;h1&gt;
 &lt;ul&gt;

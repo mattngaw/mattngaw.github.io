@@ -12,15 +12,23 @@ toc = false
 
 ~~Hated~~. Taken. *Liked*. ***Loved***.
 
+# Spring 2023 (Upcoming)
+
+- (TA maybe?) 18-213 Introduction to Computer Systems
+- 18-447 Introduction to Computer Architecture
+- 18-349 Introduction to Embedded Systems
+- 79-204 American Environmental History
+- 79-211 Modern Southeast Asia: Colonialism, Capitalism, and Cultural Exchange
+- Perhaps one more gen-ed...
+
 # Fall 2022 (Current)
 
 - (TA) 18-213 Introduction to Computer Systems
-- 18-344 Computer Systems and the Hardware-Software Interface
+- ***18-344 Computer Systems and the Hardware-Software Interface***
 - 18-290 Signals and Systems
-- 10-301 Introduction to Machine Learning
+- *10-301 Introduction to Machine Learning*
 - 76-270 Writing for the Professions
 - 98-043 StuCo: Chess Tactics and Strategy
-- 98-317 StuCo: Hype for Types
 
 # Spring 2022
 
