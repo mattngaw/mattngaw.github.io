@@ -29,7 +29,7 @@ nav_order: 2
 ~ A terminal multiplexer
 
 [Arc](https://arc.net/) 
-~ An clean browser
+~ A clean browser
 
 [Charm](https://charm.sh/) 
 ~ Gorgeous command-line tools
