@@ -4,6 +4,10 @@
 
 // Typography
 
+* {
+  font-family: "Open Sans";
+}
+
 p,
 h1,
 h2,
@@ -19,7 +23,7 @@ strong {
   color: var(--global-text-color);
 }
 
-p, li {
+p *, p, li {
   font-family: "EB Garamond";
 }
 
