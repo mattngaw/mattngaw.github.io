@@ -23,7 +23,7 @@ strong {
   color: var(--global-text-color);
 }
 
-p *, p, li {
+p *, p, li, li a, li em, li strong, td, td a {
   font-family: "EB Garamond";
 }
 
